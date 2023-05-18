@@ -29,7 +29,7 @@ include_once __DIR__.'/DataBase/db.php';
                             <p><?php echo $product->descrizione ?></p>
                             <p><?php echo $product->prezzo ?></p>
                             <?php if (!isset($product->productType)) {?>
-                                <p><?php echo $product->sizing ?></p>
+                                <p><?php echo $product->getSize() ?></p>
                             <?php } else {?>
                                 <p><?php echo $product->productType ?></p>
                             <?php }?>
